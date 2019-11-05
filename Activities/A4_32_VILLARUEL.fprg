@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-29 08:33:46 AM"/>
+        <attribute name="created" value="UmFtcztMQUIzMDRDMTg7MjAxOS0xMC0yOTswNzo0ODo1OCBBTTsyMjE4"/>
+        <attribute name="edited" value="UmFtcztMQUIzMDRDMTg7MjAxOS0xMC0yOTswODozMzo0NiBBTTsxOzIzMTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="R" type="Integer" array="False" size=""/>
+            <declare name="D" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="RorD" type="String" array="False" size=""/>
+            <declare name="Radius" type="String" array="False" size=""/>
+            <declare name="Diameter" type="String" array="False" size=""/>
+            <output expression="&quot;Are you going to enter Radius or Diameter?&quot;" newline="True"/>
+            <input variable="RorD"/>
+            <if expression="RorD = &quot;Radius&quot;">
+                <then>
+                    <output expression="&quot;Radius&quot;" newline="True"/>
+                    <input variable="R"/>
+                </then>
+                <else>
+                    <output expression="&quot;Diameter&quot;" newline="True"/>
+                    <input variable="D"/>
+                    <assign variable="R" expression="D/2"/>
+                </else>
+            </if>
+            <assign variable="A" expression="3.14*R^2"/>
+            <output expression="&quot;the answer is &quot;&amp;A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
